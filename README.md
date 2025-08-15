@@ -1,69 +1,82 @@
-# React + TypeScript + Vite
+# PokéDex
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Tecnologías
 
-Currently, two official plugins are available:
+- **Frontend**: React 19 + TypeScript
+- **Styling**: Tailwind CSS + Material-UI + Emotion
+- **Build Tool**: Vite
+- **Data Fetching**: React Query + Axios
+- **API**: PokéAPI
+- **Icons**: Lucide React
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📋 Requisitos previos
 
-## Expanding the ESLint configuration
+- Node.js 18+
+- npm o yarn
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Instalación
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. **Clona el repositorio**
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+    ```bash
+    git clone https://github.com/tu-usuario/pokeapi.git
+    cd pokeapi
+    ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. **Instala las dependencias**
+
+    ```bash
+    npm install
+    # o
+    yarn install
+    ```
+
+3. **Inicia el servidor de desarrollo**
+
+    ```bash
+    npm run dev
+    # o
+    yarn dev
+    ```
+
+4. **Abre tu navegador**
+
+    Visita `http://localhost:5173`
+
+## 📦 Scripts disponibles
+
+```bash
+# Desarrollo
+npm run dev
+
+# Build para producción
+npm run build
+
+# Vista previa del build
+npm run preview
+
+# Linting
+npm run lint
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎮 Uso
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Explorar Pokémon**: La página principal muestra una grilla con todos los Pokémon disponibles
+2. **Búsqueda**: Utiliza la barra de búsqueda para encontrar un Pokémon específico por nombre o ID
+3. **Ver detalles**: Haz click en cualquier Pokémon para ver información detallada en un modal
+4. **Navegación**: Utiliza la paginación para explorar más Pokémon
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🏗️ Estructura del proyecto
+
+```
+pokeapi/
+├── src/
+│   ├── components/       # Componentes reutilizables
+│   ├── hooks/           # Custom hooks
+│   ├── services/        # API calls y servicios
+│   ├── types/           # Tipos de TypeScript
+│   ├── utils/           # Funciones utilitarias
+│   └── App.tsx          # Componente principal
+├── public/              # Archivos estáticos
+└── package.json
 ```
